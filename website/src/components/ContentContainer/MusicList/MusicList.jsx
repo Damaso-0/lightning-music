@@ -1,11 +1,5 @@
 import React from 'react'
-import {
- MusicCard,
- MusicCardImage,
- MusicCardSubTitle,
- MusicCardTitle,
- MusicContainerArea,
-} from './musicList-styles'
+import { MusicContainerArea } from './musicList-styles'
 import Card from '../../Card/Card'
 
 const data = [
@@ -42,6 +36,40 @@ const data = [
    'https://images.pexels.com/photos/3600814/pexels-photo-3600814.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   title: 'My Title Six',
   subTitle: 'Creator Six',
+ },
+ {
+  image: 'https://images.pexels.com/photos/3761228/pexels-photo-3761228.jpeg',
+  title: 'My Title Seven',
+  subTitle: 'Creator Seven',
+ },
+ {
+  image: 'https://images.pexels.com/photos/1292241/pexels-photo-1292241.jpeg',
+  title: 'My Title Eight',
+  subTitle: 'Creator Eight',
+ },
+ {
+  image:
+   'https://images.pexels.com/photos/3528052/pexels-photo-3528052.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+  title: 'My Title Nine',
+  subTitle: 'Creator Nine',
+ },
+ {
+  image:
+   'https://images.pexels.com/photos/1568607/pexels-photo-1568607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+  title: 'My Title Ten',
+  subTitle: 'Creator Ten',
+ },
+ {
+  image:
+   'https://images.pexels.com/photos/2860804/pexels-photo-2860804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+  title: 'My Title Eleven',
+  subTitle: 'Creator Eleven',
+ },
+ {
+  image:
+   'https://images.pexels.com/photos/3016037/pexels-photo-3016037.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+  title: 'My Title Twelve',
+  subTitle: 'Creator Twelve',
  },
 ]
 
