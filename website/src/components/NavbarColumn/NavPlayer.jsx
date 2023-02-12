@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import {
  faPlayCircle,
  faBackward,
@@ -10,18 +10,35 @@ import {
  NavPlayerArea,
  NavPlayerSpacing,
  PlayerControl,
+ PlayerDataImage,
  PlayerDataMusic,
+ PlayerDataSubTitle,
+ PlayerDataText,
+ PlayerDataTitle,
  PlayerSpec,
 } from './navPlayer-styles'
 import { COLORS } from '../../constants/colors'
+import { useContext } from 'react'
+import { currentMusic } from '../../helpers/currentMusic'
 
 const NavbarPlayer = () => {
  const [playState, setPlayState] = useState(faPlayCircle)
 
+ const { currentDataMusic } = useContext(currentMusic)
+
  return (
   <>
    <NavPlayerArea>
-    <PlayerDataMusic id="playerDataMusic"></PlayerDataMusic>
+    {currentDataMusic && (
+     <PlayerDataMusic id="playerDataMusic">
+      <PlayerDataImage src={currentDataMusic.image} />
+      <PlayerDataText>
+       <PlayerDataTitle>{currentDataMusic.title}</PlayerDataTitle>
+       <PlayerDataSubTitle>{currentDataMusic.subTitle}</PlayerDataSubTitle>
+      </PlayerDataText>
+     </PlayerDataMusic>
+    )}
+
     <PlayerControl style={{ fontSize: 30 }}>
      <FontAwesomeIcon
       icon={faBackward}

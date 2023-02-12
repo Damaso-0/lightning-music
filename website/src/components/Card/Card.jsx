@@ -1,30 +1,22 @@
-import React, { useState, useEffect, createElement } from 'react'
+import React, { useContext } from 'react'
 import {
  MusicCard,
  MusicCardImage,
  MusicCardSubTitle,
  MusicCardTitle,
- PlayerDataMusicImage,
 } from './card-styles'
-import { ReactDOM } from 'react'
-import { PlayerSpec } from '../../PlayerSpec'
 
-const Card = ({ title, subTitle, image, data }) => {
- const renderArea = document.getElementById('playerDataMusic')
+import { currentMusic } from '../../helpers/currentMusic'
 
- const [dataMusic, setDataMusic] = useState([])
- const [dataMusicSpec, setDataMusicSpec] = useState()
+export function Card({ title, subTitle, image, data }) {
+ const { setCurrentDataMusic } = useContext(currentMusic)
 
- useEffect(() => {
-  setDataMusic(data)
- }, [data])
-
- const MusicDataSpec = () => {
-  renderArea.innerHTML = dataMusic.title
+ const actualMusic = () => {
+  setCurrentDataMusic(data)
  }
 
  return (
-  <MusicCard onClick={MusicDataSpec}>
+  <MusicCard onClick={actualMusic}>
    <MusicCardImage src={image} />
    <MusicCardTitle>{title}</MusicCardTitle>
    <MusicCardSubTitle>{subTitle}</MusicCardSubTitle>
