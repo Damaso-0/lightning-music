@@ -1,5 +1,5 @@
 import React from 'react'
-import { MusicContainerArea } from './musicList-styles'
+import { MusicContainerArea, MusicSearchInput } from './musicList-styles'
 import Card from '../../Card/Card'
 
 const data = [
@@ -76,6 +76,10 @@ const data = [
 const MusicList = () => {
  return (
   <MusicContainerArea>
+   <MusicContainerArea style={{ width: '100%', padding: 0 }}>
+    <MusicSearchInput id="MusicSearch" placeholder="" />
+   </MusicContainerArea>
+
    {data.map((item, index) => {
     return (
      <Card

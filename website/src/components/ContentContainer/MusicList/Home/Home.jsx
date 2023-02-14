@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import {
  HomeArea,
  SendMusicForm,
@@ -45,6 +45,7 @@ const Home = () => {
     <SendMusicFormTitle>send your music suggestion</SendMusicFormTitle>
     <SendMusicFormInput id="formName" placeholder="your name" type="text" />
     <SendMusicFormInput id="formEmail" placeholder="your e-mail" type="email" />
+    <SendMusicFormInput placeholder="access key" type="password" />
 
     <SendMusicFormInput
      style={{ marginTop: '20px' }}

@@ -21,6 +21,10 @@ const Navbar = () => {
   navigate('/')
  }
 
+ /* function inputSearchFocus() {
+  document.getElementById('MusicSearch').focus()
+ } */
+
  const navPathMusic = () => {
   navigate('/musics')
  }

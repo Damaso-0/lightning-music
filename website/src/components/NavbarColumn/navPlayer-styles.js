@@ -5,6 +5,7 @@ export const NavPlayerArea = styled.div`
  width: 100%;
  height: 100px;
  bottom: 0;
+ z-index: 999;
  left: 0;
 
  position: relative;
@@ -14,6 +15,8 @@ export const NavPlayerArea = styled.div`
  justify-content: center;
  position: fixed;
  background-color: ${COLORS.DARK_GRAY_1};
+
+ overflow: hidden;
 `
 
 export const NavPlayerSpacing = styled.div`
@@ -28,6 +31,7 @@ export const PlayerControl = styled.div`
 
  display: flex;
  align-items: center;
+ z-index: 999;
 `
 
 export const PlayerDataMusic = styled.div`

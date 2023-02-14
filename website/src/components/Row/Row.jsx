@@ -1,7 +1,7 @@
 import { RowArea } from './row-styles'
 
-const Row = (style) => {
- return <RowArea style={style}></RowArea>
+const Row = () => {
+ return <RowArea></RowArea>
 }
 
 export default Row
